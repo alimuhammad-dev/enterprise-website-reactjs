@@ -1,8 +1,7 @@
 import React from "react";
-import Cards from "./Cards";
+import Cards from "../Components/Common/Cards";
 import { NavLink } from "react-router-dom";
-import Sdata from "./Sdata";
-import "../index.css";  
+import Sdata from "../Data/Sdata";
 
 function Services() {
   return (

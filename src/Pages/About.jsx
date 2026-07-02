@@ -1,5 +1,5 @@
 import React from "react";
-import Common from "./Common";
+import Common from "../Components/Common/Common";
 
 const About = () => {
   return (

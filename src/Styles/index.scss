@@ -1,3 +1,18 @@
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+@use "./abstracts/functions";
+
+@use "./base/reset";
+@use "./base/global";
+@use "./base/typography";
+
+@use "./components/navbar";
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/footer";
+
+@use "./pages/home";
+@use "./pages/contact";
 /* ==========================================
    NAVBAR
 ========================================== */

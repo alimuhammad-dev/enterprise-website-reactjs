@@ -1,0 +1,224 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                NAVBAR
+=========================================*/
+
+.nav_bg {
+
+    background: rgba(255,255,255,.95);
+
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    box-shadow:$shadow-sm;
+
+}
+
+.nav-col{
+
+    padding:.8rem 0;
+
+}
+
+/*=========================================
+                LOGO
+=========================================*/
+
+.navbar-brand{
+
+    font-size:clamp(1.2rem,2vw,1.8rem);
+
+    font-weight:$fw-bold;
+
+    color:$primary !important;
+
+    letter-spacing:.5px;
+
+    @include transition;
+
+    &:hover{
+
+        color:$primary-dark !important;
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+/*=========================================
+                LINKS
+=========================================*/
+
+.navbar-nav{
+
+    gap:1.5rem;
+
+}
+
+.nav-item{
+
+    position:relative;
+
+}
+
+.nav-link{
+
+    position:relative;
+
+    color:$text !important;
+
+    font-size:clamp(.9rem,1vw,1rem);
+
+    font-weight:$fw-medium;
+
+    padding:.5rem 0;
+
+    @include transition;
+
+    &:hover{
+
+        color:$primary !important;
+
+    }
+
+    &::after{
+
+        content:"";
+
+        position:absolute;
+
+        left:0;
+
+        bottom:-4px;
+
+        width:0;
+
+        height:2px;
+
+        background:$primary;
+
+        @include transition;
+
+    }
+
+    &:hover::after{
+
+        width:100%;
+
+    }
+
+    &.active{
+
+        color:$primary !important;
+
+        font-weight:$fw-semibold;
+
+    }
+
+    &.active::after{
+
+        width:100%;
+
+    }
+
+}
+
+/*=========================================
+                TOGGLER
+=========================================*/
+
+.navbar-toggler{
+
+    border:none;
+
+    box-shadow:none !important;
+
+    padding:0;
+
+    &:focus{
+
+        box-shadow:none;
+
+    }
+
+}
+
+.navbar-toggler-icon{
+
+    width:1.5rem;
+
+    height:1.5rem;
+
+}
+
+/*=========================================
+                TABLET
+=========================================*/
+
+@include tablet{
+
+    .nav-col{
+
+        padding:.5rem 0;
+
+    }
+
+    .navbar-collapse{
+
+        margin-top:1rem;
+
+        background:$white;
+
+        border-radius:$radius-lg;
+
+        padding:1rem;
+
+        box-shadow:$shadow-md;
+
+    }
+
+    .navbar-nav{
+
+        gap:.6rem;
+
+        text-align:center;
+
+    }
+
+    .nav-link{
+
+        padding:.8rem 0;
+
+        font-size:1rem;
+
+        &::after{
+
+            display:none;
+
+        }
+
+    }
+
+}
+
+@include small-mobile{
+
+    .navbar-brand{
+
+        font-size:1.15rem;
+
+    }
+
+}

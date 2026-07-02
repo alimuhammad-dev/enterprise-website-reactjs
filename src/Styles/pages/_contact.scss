@@ -1,0 +1,164 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                CONTACT
+=========================================*/
+
+.contact_section {
+
+    padding: 80px 0;
+
+}
+
+.contact_heading {
+
+    font-size: 2.7rem;
+
+    font-weight: $fw-bold;
+
+    color: $dark;
+
+}
+
+.contact_subheading {
+
+    margin-top: 12px;
+
+    color: $secondary;
+
+    font-size: 1.05rem;
+
+}
+
+/*=========================================
+                FORM
+=========================================*/
+
+.contact_form {
+
+    background: $white;
+
+    padding: 45px;
+
+    border-radius: $radius-lg;
+
+    box-shadow: $shadow-sm;
+
+    transition: $transition;
+
+    &:hover {
+
+        box-shadow: $shadow-lg;
+
+    }
+
+}
+
+/*=========================================
+                LABEL
+=========================================*/
+
+.form-label {
+
+    font-weight: $fw-semibold;
+
+    color: $dark;
+
+    margin-bottom: 8px;
+
+}
+
+/*=========================================
+                INPUTS
+=========================================*/
+
+.form-control {
+
+    border: 1px solid $border;
+
+    border-radius: $radius;
+
+    padding: 12px 18px;
+
+    transition: $transition;
+
+    &:focus {
+
+        border-color: $primary;
+
+        box-shadow: 0 0 0 .2rem rgba(13,110,253,.15);
+
+    }
+
+}
+
+textarea.form-control {
+
+    resize: none;
+
+}
+
+/*=========================================
+                RESPONSIVE
+=========================================*/
+
+@include tablet {
+
+    .contact_heading {
+
+        font-size: 2.3rem;
+
+    }
+
+    .contact_form {
+
+        padding: 35px;
+
+    }
+
+}
+
+@include mobile {
+
+    .contact_section {
+
+        padding: 60px 0;
+
+    }
+
+    .contact_heading {
+
+        font-size: 2rem;
+
+    }
+
+    .contact_subheading {
+
+        font-size: .95rem;
+
+    }
+
+    .contact_form {
+
+        padding: 25px;
+
+    }
+
+}
+
+@include small-mobile {
+
+    .contact_heading {
+
+        font-size: 1.8rem;
+
+    }
+
+    .contact_form {
+
+        padding: 20px;
+
+    }
+
+}

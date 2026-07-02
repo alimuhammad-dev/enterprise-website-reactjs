@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                CARD
+=========================================*/
+
+.card{
+
+    @include card;
+
+    height:100%;
+
+    &:hover{
+
+        transform:translateY(-10px);
+
+        box-shadow:$shadow-lg;
+
+    }
+
+}
+
+.card-img-top{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card-body{
+
+    @include flex-column;
+
+    padding:1.5rem;
+
+}
+
+.card-title{
+
+    font-weight:$fw-semibold;
+
+    margin-bottom:.8rem;
+
+}
+
+.card-text{
+
+    flex-grow:1;
+
+    color:$secondary;
+
+    margin-bottom:1rem;
+
+}
+
+.card .btn{
+
+    margin-top:auto;
+
+}

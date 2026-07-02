@@ -1,7 +1,6 @@
 import React from "react";
-import web from "../assets/images/web.svg";
+import web from "../.././assets/images/web.svg";
 import { NavLink } from "react-router-dom";
-import "../index.css";
 
 function Cards(props) {
   return (

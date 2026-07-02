@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                ABOUT PAGE
+=========================================*/
+
+.about {
+
+  padding: 80px 0;
+
+  .about-content {
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 20px 0;
+      color: $secondary;
+      font-size: $fs-lg;
+      line-height: 1.8;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: $secondary;
+    }
+
+  }
+
+  .about-img {
+
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+  }
+
+}
+
+@include tablet {
+
+  .about {
+
+    text-align: center;
+
+    .about-img {
+      margin-bottom: 40px;
+    }
+
+  }
+
+}
+
+@include mobile {
+
+  .about {
+
+    padding: 60px 0;
+
+    .about-content {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+    }
+
+  }
+
+}

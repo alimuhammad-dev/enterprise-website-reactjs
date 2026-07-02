@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                FOOTER
+=========================================*/
+
+.footer{
+
+    width:100%;
+
+    background:$light;
+
+    padding:30px 0;
+
+    margin-top:80px;
+
+    text-align:center;
+
+    border-top:1px solid $border;
+
+    p{
+
+        margin:0;
+
+        color:$secondary;
+
+        line-height:1.8;
+
+    }
+
+    strong{
+
+        color:$primary;
+
+        @include transition;
+
+        &:hover{
+
+            color:$primary-dark;
+
+        }
+
+    }
+
+}
+
+.footer-text{
+
+    margin-top:8px;
+
+    font-size:.9rem;
+
+    color:$secondary;
+
+}
+
+@include mobile{
+
+    .footer{
+
+        padding:25px 15px;
+
+    }
+
+}

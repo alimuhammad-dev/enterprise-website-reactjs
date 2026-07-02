@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*=========================================
+                BUTTONS
+=========================================*/
+
+.btn-get-started{
+
+    @include button($primary,$white);
+
+    position:relative;
+
+    overflow:hidden;
+
+    z-index:1;
+
+    &::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        background:$white;
+
+        transform:scaleX(0);
+
+        transform-origin:left;
+
+        transition:.35s;
+
+        z-index:-1;
+
+    }
+
+    &:hover{
+
+        color:$primary;
+
+        transform:translateY(-5px);
+
+        box-shadow:$shadow-lg;
+
+    }
+
+    &:hover::before{
+
+        transform:scaleX(1);
+
+    }
+
+    &:active{
+
+        transform:scale(.98);
+
+    }
+
+}
+
+.contact_btn{
+
+    @include button($primary,$white);
+
+    &:hover{
+
+        background:transparent;
+
+        color:$primary;
+
+        transform:translateY(-4px);
+
+    }
+
+}
+
+@include mobile{
+
+    .btn-get-started{
+
+        padding:12px 28px;
+
+        font-size:.95rem;
+
+    }
+
+    .contact_btn{
+
+        width:100%;
+
+    }
+
+}

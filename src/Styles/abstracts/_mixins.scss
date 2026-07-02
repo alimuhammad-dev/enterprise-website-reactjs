@@ -1,0 +1,144 @@
+@use "./variables" as *;
+
+/*=========================================
+            FLEX
+=========================================*/
+
+@mixin flex-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@mixin flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+@mixin flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/*=========================================
+            BUTTON
+=========================================*/
+
+@mixin button($bg,$color){
+
+    display:inline-block;
+
+    padding:14px 40px;
+
+    border-radius:$radius-xl;
+
+    background:$bg;
+
+    color:$color;
+
+    border:2px solid $bg;
+
+    font-weight:$fw-semibold;
+
+    text-decoration:none;
+
+    transition:$transition;
+
+    cursor:pointer;
+
+}
+
+/*=========================================
+            CARD
+=========================================*/
+
+@mixin card{
+
+    background:$white;
+
+    border-radius:$radius-lg;
+
+    box-shadow:$shadow-sm;
+
+    overflow:hidden;
+
+    transition:$transition;
+
+}
+
+/*=========================================
+            IMAGE
+=========================================*/
+
+@mixin image-fluid{
+
+    width:100%;
+    height:auto;
+    display:block;
+
+}
+
+/*=========================================
+            TRANSITION
+=========================================*/
+
+@mixin transition{
+
+    transition:$transition;
+
+}
+
+/*=========================================
+            BREAKPOINTS
+=========================================*/
+
+@mixin desktop{
+
+    @media(min-width:1200px){
+
+        @content;
+
+    }
+
+}
+
+@mixin laptop{
+
+    @media(max-width:1199px){
+
+        @content;
+
+    }
+
+}
+
+@mixin tablet{
+
+    @media(max-width:991px){
+
+        @content;
+
+    }
+
+}
+
+@mixin mobile{
+
+    @media(max-width:768px){
+
+        @content;
+
+    }
+
+}
+
+@mixin small-mobile{
+
+    @media(max-width:576px){
+
+        @content;
+
+    }
+
+}
