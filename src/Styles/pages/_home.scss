@@ -6,13 +6,19 @@
 =========================================*/
 
 #header {
-
     width: 100%;
-
     min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
 
-    @include flex-center;
+    .container {
+        max-width: 1320px;
+    }
 
+    .row {
+        min-height: calc(100vh - 80px);
+        align-items: center;
+    }
 }
 
 /*=========================================
@@ -21,32 +27,25 @@
 
 .header-content {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     h1 {
-
         font-size: $fs-4xl;
-
         font-weight: $fw-bold;
-
         color: $dark;
-
         line-height: 1.3;
-
+        margin-bottom: 1rem;
     }
 
     h2 {
-
-        margin-top: 20px;
-
         color: $secondary;
-
         font-size: $fs-lg;
-
         font-weight: $fw-normal;
-
         line-height: 1.8;
-
+        margin-bottom: 2rem;
     }
-
 }
 
 /*=========================================
@@ -54,9 +53,7 @@
 =========================================*/
 
 .brand-name {
-
     color: $primary;
-
 }
 
 /*=========================================
@@ -64,19 +61,16 @@
 =========================================*/
 
 .header-img {
-
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
-
         width: 100%;
-
-        max-width: 520px;
-
+        height: auto;
+        display: block;
         animation: float 3s ease-in-out infinite;
-
     }
-
 }
 
 /*=========================================
@@ -86,101 +80,83 @@
 @keyframes float {
 
     0% {
-
         transform: translateY(0);
-
     }
 
     50% {
-
         transform: translateY(-18px);
-
     }
 
     100% {
-
         transform: translateY(0);
-
     }
 
 }
 
 /*=========================================
-                RESPONSIVE
+                TABLET
 =========================================*/
 
 @include tablet {
 
     #header {
-
         min-height: auto;
-
         padding: 80px 0;
 
+        .row {
+            min-height: auto;
+        }
     }
 
     .header-content {
 
         text-align: center;
-
-        padding: 30px 15px;
+        padding-top: 2rem;
 
         h1 {
-
             font-size: 2.6rem;
-
         }
 
         h2 {
-
             font-size: 1.1rem;
-
         }
-
     }
 
     .header-img {
 
-        margin-bottom: 40px;
+        margin-bottom: 3rem;
 
         img {
-
-            width: 80%;
-
-            max-width: 420px;
-
+            width: 85%;
         }
-
     }
-
 }
 
+/*=========================================
+                MOBILE
+=========================================*/
+
 @include mobile {
+
+    #header {
+        padding: 60px 0;
+    }
 
     .header-content {
 
         h1 {
-
             font-size: 2rem;
-
         }
 
         h2 {
-
             font-size: 1rem;
-
         }
-
     }
 
     .header-img {
 
         img {
-
-            width: 90%;
-
+            width: 100%;
         }
-
     }
-
 }

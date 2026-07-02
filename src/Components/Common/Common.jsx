@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import web from "../.././assets/images/web.svg";
+import web from "../../assets/images/web.svg";
 
 const Common = (props) => {
   return (
     <section id="header">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center gx-lg-5 gx-4">
+
           {/* Left Section */}
           <div className="col-lg-6 col-12 order-2 order-lg-1 header-content">
             <h1>
@@ -25,8 +26,9 @@ const Common = (props) => {
 
           {/* Right Section */}
           <div className="col-lg-6 col-12 order-1 order-lg-2 header-img">
-            <img src={web} className="img-fluid" alt="Illustration" />
+            <img src={web} alt="Illustration" />
           </div>
+
         </div>
       </div>
     </section>
